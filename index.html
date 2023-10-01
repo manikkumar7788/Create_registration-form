@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="le=edge">
+    <!-----Bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!---Front awesome css -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!---Google Font --->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+    <!--custom css--->
+    <link rel="stylesheet" href="css/custom.css">
+
+
+    <title>OSMS</title>
+</head>
+
+<body>
+    <!------ start Navigation--->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-danger pl-5 fixed-top">
+        <a href="index.html" class="navbar-brand">Welcome</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="myMenu">
+            <ul class="navbar-nav pl-5 custom-nav">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#registration" class="nav-link">Registration</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    </nav>
+    <!----End Navigation-->
+
+    <!----Start  header Jumbotron-->
+    <header class="jumbotron back-image" style="background-image: url(Banner1.jpeg);">
+        <div class="myclass mainHeading">
+            <h1 class="text-uppercase text-blue font-weight-bold">Welcome to Registration</h1>
+
+            <a href="#registration" class="btn btn-danger mr-4">Sign Up</a>
+        </div>
+    </header>
+    <!----End  header Jumbotron-->
+
+    <section class="sign_up">
+        <div class="container" id="registration">
+            <h1>Register</h1>
+            <p id="create">Create your account. It's free and only takes a minute</p>
+            <div class="name">
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+                <span id="nameError" class="error"></span>
+            </div>
+            <div class="details">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <span id="passwordError" class="error"></span>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="terms" class="check" required>
+                <label for="terms" class="check">I accept the <a href="The specific content of terms of us.html">Terms of use</a> & <a
+                        id="privacy" href="Privacy Policy.html">Privacy Policy</a>
+                </label>
+            </div>
+            <button id="register_btn">Register Now</button>
+            <span id="formError" class="error"></span>
+        </div>
+    </section>
+    <script>
+        document.getElementById("register_btn").addEventListener("click", function() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var terms = document.getElementById("terms").checked;
+            var nameError = document.getElementById("nameError");
+            var passwordError = document.getElementById("passwordError");
+            var formError = document.getElementById("formError");
+            var isValid = true;
+
+            // Reset error messages
+            nameError.textContent = "";
+            passwordError.textContent = "";
+            formError.textContent = "";
+
+            // Validate name
+            if (firstName === "" || lastName === "") {
+                nameError.textContent = "Please enter your full name.";
+                isValid = false;
+            }
+
+            // Validate password
+            if (password.length < 6) {
+                passwordError.textContent = "Password must be at least 6 characters long.";
+                isValid = false;
+            } else if (password !== confirmPassword) {
+                passwordError.textContent = "Passwords do not match.";
+                isValid = false;
+            }
+
+            // Validate terms acceptance
+            if (!terms) {
+                formError.textContent = "Please accept the terms of use and privacy policy.";
+                isValid = false;
+            }
+
+            // If the form is valid, you can proceed with registration
+            if (isValid) {
+                // Perform registration logic here
+                alert("Registration successful!");
+            }
+        });
+    </script>
+    <!----JavaScript-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+
+</body>
+
+</html>

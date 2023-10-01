@@ -1,0 +1,132 @@
+    /* change Brand  name Front */
+    
+    .navbar-brand {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    /* Change Navigation color */
+    
+    .navbar #myMenu .custom-nav .nav-item a {
+        color: white;
+    }
+    
+    .navbar #myMenu .custom-nav .nav-item a:hover {
+        color: #f0aab1;
+    }
+    /* Make header image Responsive */
+    
+    .back-image {
+        background: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 95vh;
+        border-radius: 0px;
+        margin-top: 74px;
+    }
+    /*  Header image Sub-title  */
+    
+    .font-italic {
+        font: size 24px;
+    }
+    
+    .fi-color {
+        color: red;
+    }
+    
+    .fi-color.hover {
+        color: red;
+    }
+    
+    a {
+        color: black;
+    }
+    
+    .active {
+        color: white;
+        background-color: #dc3545;
+    }
+    
+    a:hover {
+        color: #f26571;
+    }
+    /* Margin for Welcome to OSMS */
+    
+    .mainHeading {
+        margin-top: 50px;
+    }
+    /*    */
+    
+    @media (max-width: 767px) {
+        .navbar {
+            padding: 10px 0;
+        }
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+    }
+    
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+    
+    input,
+    button {
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    button {
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    .error {
+        color: red;
+        font-size: 14px;
+    }
+    /* Existing styles */
+    /* Media Query for Mobile Responsiveness */
+    
+    @media (max-width: 767px) {
+        .navbar-brand {
+            font-size: 1.5em;
+            /* Decrease font size for smaller screens */
+        }
+        .back-image {
+            min-height: 70vh;
+            /* Decrease header image height for smaller screens */
+            margin-top: 54px;
+            /* Adjust margin for smaller screens */
+        }
+        .container {
+            max-width: 100%;
+            /* Make the container full width for smaller screens */
+            margin: 10px;
+            /* Adjust margin for smaller screens */
+            padding: 15px;
+            /* Adjust padding for smaller screens */
+        }
+        input,
+        button {
+            margin-bottom: 8px;
+            /* Decrease margin between input fields and buttons */
+            font-size: 14px;
+            /* Decrease font size for input fields and buttons */
+        }
+    }
